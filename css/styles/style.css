@@ -1,0 +1,24 @@
+<style>
+    body {
+      background-color: linen;
+    }
+    
+    h1 {
+      color: maroon;
+      margin-left: 40px;
+    } 
+    img {
+width: 50%;
+height: auto;
+float: right
+
+
+}
+    </style>
+
+    h1{
+      color: #0000FF;
+    }
+    h2{
+      color: #00CCFF;
+    }
