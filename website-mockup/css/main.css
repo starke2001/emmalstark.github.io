@@ -115,8 +115,7 @@ a {
 
 /* SVG & SUBHEADING*/
 /* splash page svg */
-.svg {
-    grid-area: svg;
+.splash-svg {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 10%;
