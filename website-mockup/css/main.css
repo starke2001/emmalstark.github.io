@@ -1,25 +1,6 @@
 
-/* 
-how do I make splash page stay centered when height changes?
 
-*/
-
-/* SPLASH PAGE
-make subheading smaller as width decreases
-svg stay centered
-*/
-
-/* HOME PAGE
-fix search bar (widen) & media query to not overlap account icon
-subheading smller media query
-svg bigger media query
-icons smaller media 
-pictures one column media
-*/
-
-
-
-/* FONTS*/
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto+Mono:wght@200&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
@@ -434,8 +415,6 @@ button:hover {
     }
 }
 
-
-/* one column switch  */
 @media (max-width:700px) {
     .splash-svg {
         margin-top: 25%;
@@ -520,7 +499,6 @@ button:hover {
     .privacy {
         font-size: 13px;
     }
-
 }
 
 @media (max-width:500px) {
