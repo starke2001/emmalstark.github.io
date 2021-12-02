@@ -1,3 +1,24 @@
+
+/* 
+how do I make splash page stay centered when height changes?
+
+*/
+
+/* SPLASH PAGE
+make subheading smaller as width decreases
+svg stay centered
+*/
+
+/* HOME PAGE
+fix search bar (widen) & media query to not overlap account icon
+subheading smller media query
+svg bigger media query
+icons smaller media 
+pictures one column media
+*/
+
+
+
 /* FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto+Mono:wght@200&display=swap');
 
@@ -74,7 +95,6 @@ a {
     align-items: center;
     justify-content: center;
     padding-top: 10px;
-
 }
 .search-bar {
     grid-area: search-bar;
@@ -89,6 +109,8 @@ a {
 }
 .search-box {
     width: 565px;
+    height: 28px;
+    border-radius:10px;
 }
 
 /* SIGN IN & CART ICON */
@@ -96,12 +118,12 @@ a {
     grid-area: account;
     max-width: 100%;
     align-items: center;
-    justify-content: flex-end;
-    display: flexbox;
+    justify-content: flex-start;
+    display: flex;
     padding:2%;
-    margin-top: 0;
-    font-size: 12px;
-    margin-bottom: 0%;
+    font-size: 15px;
+    max-height: 28px;
+    margin-right: 10px;
 }
 .account a {
     white-space: nowrap;
@@ -116,19 +138,17 @@ a {
 /* SVG & SUBHEADING*/
 /* splash page svg */
 .splash-svg {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10%;
-    max-width: 90%;
-    margin-bottom: 0;
+    margin: auto;
+    margin-top: 6%;
+    max-width: 1300px;
 }
 /* home and contact svg */
 .svg {
     grid-area: svg;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
-    max-width: 60%;
+    width: 930px;
     margin-bottom: 0;
 }
 .svg img,
@@ -143,6 +163,7 @@ a {
     font-family: var(--secondary-font);
     color: var(--seconday-color);
     margin-top: 0;
+    margin-bottom: 30px;
 }
 
 /* IMAGE GALLERY */
@@ -222,28 +243,35 @@ a {
                          'comments comments'
                          'privacy privacy'
                          'submit reset';
-    margin: 5%;
+    margin:auto;
+    background-color: rgba(198, 224, 220, 0.041);
+    padding: 4%;
+    max-width: 900px;
+    box-sizing: border-box;
 }
 fieldset {
     border:0;
+    padding: 1%;
 }
 .first-name {
     grid-area: first-name;
+    margin-right: 4%;
+    
 }
 input[type=text]{
-    width: 90%;
+    width: 100%;
     padding: 10px;
-    padding:10px;
     border-radius:10px;
+    margin-bottom: 5%;
 }
 input[type=email]{
-    width: 90%;
-    padding: 10px;
+    width: 100%;
     padding:10px;
     border-radius:10px;
+    margin-bottom: 3%;
 }
 textarea {
-    width: 90%;
+    width: 100%;
     resize: vertical;
     padding:10px;
     border-radius:10px;
@@ -251,6 +279,7 @@ textarea {
 }
 .last-name {
     grid-area: last-name;
+    margin-left: 4%;
 }
 .email{
     grid-area: email;
@@ -272,7 +301,9 @@ button:hover {
     color:#fff;
     font-weight:600;
     border-radius:10px;
-    width: 70%;
+    width: 100%;
+    margin-left: 5%;
+    
 }
 .submit {
     grid-area: submit;
@@ -282,7 +313,9 @@ button:hover {
     color:#fff;
     font-weight:600;
     border-radius:10px;
-    width:70%;
+    width:100%;
+    margin-right: 5%;
+    margin-left: 2%;
 }
 
 /* FOOTER */
@@ -306,7 +339,256 @@ button:hover {
     transform:rotate(2deg);
     transition:all .75s ease;
 }
-.copy {
+.copyright {
     grid-area: copy;
     text-align: center;
+}
+.address {
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width:1350px) {
+    .flip-card {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width:1250px) {
+    .splash-svg {
+        max-width: 1100px;
+    }
+    .flip-card {
+        width: 275px;
+        height: 275px;
+    }
+    .sub-heading {
+        margin-bottom: 29px;
+    }
+}
+
+@media (max-width:1150px) {
+    .svg {
+        width: 850px;
+    }
+    .gallery {
+        max-width: 1100px;
+        grid-template-areas: 'image-1 image-2' 
+                             'image-3 image-4';
+        margin-top: 5%;
+    }    
+    .flip-card {
+        width: 400px;
+        height: 400px;
+    }     
+    .sub-heading {
+        margin-bottom: 27px;
+    }            
+}
+
+@media (max-width:1000px) {
+    .splash-svg {
+        max-width: 900px;
+        margin-top: 10%;
+    }
+    .sub-heading {
+        margin-bottom: 26px;
+    }
+    .form {
+        max-width: 850px;
+    }
+}
+
+@media (max-width:900px) {
+    .flip-card {
+        width: 350px;
+        height: 350px;
+    }    
+    .svg {
+        width: 750px;
+    }
+    .sub-heading {
+        margin-bottom: 24px;
+    }
+    .search-box {
+        height: 23px;
+        border-radius:10px;
+    }
+}
+
+@media (max-width:850px) {
+    .splash-svg {
+        max-width: 700px;
+        margin-top: 20%;
+    }
+    .sub-heading {
+        font-size: 30px;
+        margin-bottom: 22px;
+    }
+    .social-media img{
+        max-width:28px;
+    }
+    .form {
+        max-width: 750px;
+    }
+}
+
+
+/* one column switch  */
+@media (max-width:700px) {
+    .splash-svg {
+        margin-top: 25%;
+    }
+    .sub-heading {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .social-media img{
+        max-width:25px;
+    }
+    .flip-card {
+        width: 275px;
+        height: 275px;
+    }   
+    .svg{
+        width: 600px;
+    }
+    .search-box {
+        width: 500px;
+        margin-left: 10px;
+    }
+    .account {
+        font-size: 12px;
+    }
+    .privacy {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:600px) {
+    .splash-svg {
+        max-width: 550px;
+        margin-top: 27%;
+    }
+    .sub-heading {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    .social-media img{
+        max-width:22px;
+    }
+    .gallery {
+        max-width: 1100px;
+        grid-template-areas: 'image-1'
+                             'image-2' 
+                             'image-3'
+                             'image-4';
+        margin-top: 5%;
+    }    
+    .flip-card {
+        width: 300px;
+        height: 300px;
+    } 
+    .svg{
+        width: 500px;
+    }
+    .search-box {
+        width: 400px;
+    }
+    .form {
+        max-width: 500px;
+        grid-template-areas: 'first-name' 
+                            'last-name'
+                            'email'
+                            'comments'
+                            'privacy'
+                            'submit' 
+                            'reset';
+        padding: 10%;
+    }
+    input[type=text], 
+    input[type=email],
+    .submit {
+        margin-bottom: 5%;
+    }
+    .reset,
+    .submit,
+    .last-name {
+        margin-left: 0;
+    }
+    .privacy {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width:500px) {
+    .splash-svg {
+        max-width: 475px;
+        margin-top: 40%;
+    }
+    .sub-heading {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .social-media img { 
+        max-width:20px;
+    }
+    .svg {
+        width: 400px;
+    }
+    .search-box {
+        width: 300px;
+    }
+    .form {
+        max-width: 400px;
+    }
+}
+
+@media (max-width:500px) {
+    .search-box {
+        width: 275px;
+    }
+}
+
+@media (max-width:400px) {
+    .splash-svg {
+        max-width: 350px;
+        margin-top: 52%;
+    }
+    .svg {
+        max-width: 350px;
+    }
+    .sub-heading {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .social-media img{
+        max-width:20px;
+    }
+    .search-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .search-box {
+        height: 20px;
+    }
+    .account{
+        display: inherit;
+        font-size: 12px;
+        margin-right: 2px;
+    }
+    .account img{
+        width: 20px;
+        padding-left: 7px;
+    }
+    .account a {
+        margin-right: 15px;
+    }
+    .form {
+        max-width: 350px;
+        font-size: 16px;
+    }
+    
 }
